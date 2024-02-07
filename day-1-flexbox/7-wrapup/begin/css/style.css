@@ -37,7 +37,7 @@ body {
 section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding:0 1rem;
 }
 
 section h2 {
@@ -137,6 +137,28 @@ nav a:hover {
     max-height: 454px;
 }
 
+/* popular prints styles */
+
+.popular {
+    background-color: var(--color2);
+    max-width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+}
+
+#popular-prints {
+    color: white;
+}
+
+/* added bottom padding */
+
+#featured {
+    padding-bottom: 3rem;
+}
+
+#collections {
+    padding-bottom: 5rem;
+}
 
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
 
@@ -314,6 +336,15 @@ footer address {
     address {
         flex-basis: 49.5%;
     }
+
+    #popular-prints li:last-child {
+        flex-basis: 100%;
+    }
+
+    #popular-prints li:last-child figure img {
+        object-position: 0 -350px;
+    }
+
     /* turn off object position, inherit object-fit: cover */
     figure img {
         object-position: 0;
@@ -362,9 +393,14 @@ footer address {
         margin-left: 100px;
     }
     section li,
-    .social {
+    .social, #popular-prints li:last-child {
         flex-basis: 32.5%;
     }
+
+#popular-prints li:last-child figure img {
+        object-position: 0;
+    }
+
     address {
         flex-basis: 65.5%;
     }
